@@ -1,0 +1,72 @@
+@font-face {
+    font-family: ArcadeGamer;
+    src: url("../resources/Arcade_Gamer.otf");
+}
+
+body {
+    background-color: #2b0f54;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#main {
+    background-color: #2b0f54;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    font-family: 'ArcadeGamer';
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    #main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+    }
+
+    #mainText {
+        width: 100%;
+    }
+}
+
+#mainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5vw;
+}
+
+#name {
+    font-size: 65px;
+    margin-bottom: 0px;
+    color: #FD7F42;
+}
+
+#se {
+    font-size: 30px;
+    color: #F24E63;
+    margin-top: 0px;
+}
+
+#pixel_art {
+    rotate: -6deg;
+    transition: transform 0.3s ease;
+}
+
+.zoom-out {
+    transform: scale(1.3);
+}

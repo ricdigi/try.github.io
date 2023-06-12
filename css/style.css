@@ -10,7 +10,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #main {
@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     font-family: 'ArcadeGamer';
     font-size: 30px;
@@ -29,31 +29,34 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 1100px) {
-    #main {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: flex-start;
-    }
-
-    #mainText {
-        width: 100%;
-    }
-}
-
 #mainText {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 5vw;
 }
 
 #name {
     font-size: 65px;
     margin-bottom: 0px;
     color: #FD7F42;
+}
+
+@media screen and (max-width: 1100px) {
+    #main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mainText {
+        width: 100%;
+        align-items: center;
+    }
+
+    #name {
+        text-align: center;
+    }
 }
 
 #se {

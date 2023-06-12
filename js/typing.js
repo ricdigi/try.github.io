@@ -26,7 +26,7 @@ function myFunction() {
     setTimeout(() => {el.innerHTML += " |"}, 750);
   }
 
-  typeWriter(myName, "name", 0, true);
+  typeWriter(myName, "name", 0, false);
   typeWriter(job, "se", 0);
 
 }

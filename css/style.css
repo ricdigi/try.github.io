@@ -52,6 +52,7 @@ body {
     #mainText {
         width: 100%;
         align-items: center;
+        line-height: 55px;
     }
 
     #name {

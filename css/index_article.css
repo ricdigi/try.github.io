@@ -10,8 +10,7 @@
     justify-content: space-around;
     align-items: flex-start;
     align-content: flex-start;
-    margin-left: 60px;
-    margin-right: 60px;
+    padding-top: 100vh;
 }
 
 #articles h2 {
@@ -44,4 +43,16 @@
     border: 3px solid #FD7F42;
     /* Change background color and recude background opacity */
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1100px) {
+    #articles {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
 }

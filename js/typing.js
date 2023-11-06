@@ -1,7 +1,7 @@
 function typingEffect() {
-  var speed = 70 ;
-  var myName = "CLAUDIO PALOSCIA";
-  var job = "SOFTWARE ENGINEER";
+  var speed = 70;
+  var myName = "CIAO FIONA";
+  var job = "SPAIN >>> CATALUNYA";
 
   let name = document.getElementById("name");
   let se = document.getElementById("se");
@@ -25,12 +25,13 @@ function typingEffect() {
 
   function pulse(el) {
     el.innerHTML = el.innerHTML.slice(0, -1);
-    setTimeout(() => {el.innerHTML += " |"}, 750);
+    setTimeout(() => {
+      el.innerHTML += " |";
+    }, 750);
   }
 
   typeWriter(myName, name, 0, false);
   typeWriter(job, se, 0, false);
-
 }
 
 window.addEventListener("load", typingEffect);

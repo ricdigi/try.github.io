@@ -1,7 +1,7 @@
 function typingEffect() {
   var speed = 70;
-  var myName = "CIAO FIONA";
-  var job = "SPAIN >>> CATALUNYA";
+  var myName = "CLAUDIO PALOSCIA";
+  var job = "SOFTWARE ENGINEER";
 
   let name = document.getElementById("name");
   let se = document.getElementById("se");

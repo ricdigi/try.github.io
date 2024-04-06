@@ -1,99 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KY47V0PKWC"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-KY47V0PKWC"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-      gtag("config", "G-KY47V0PKWC");
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="android-icon-192x192.png"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="manifest.json" />
-    <meta name="msapplication-TileColor" content="#2b0f54" />
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
-    <meta name="theme-color" content="#2b0f54" />
-    <!-- Import the stylesheet style.css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index_article.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script src="js/typing.js" defer></script>
-    <script src="js/image-effect.js" defer></script>
-    <title>Claudio Paloscia</title>
-    <meta
-      name="description"
-      content="Claudio Paloscia's personal website and playground. Always under construction."
-    />
-  </head>
-  <body>
-    <div id="main">
-      <div id="mainText">
-        <h1 id="name"></h1>
-        <h3 id="se">|</h3>
-      </div>
-      <img
-        src="images/pixel_art.png"
-        alt="pixel art"
-        width="402px"
-        id="pixel_art"
-      />
-    </div>
-    <!-- <i class="material-icons" id="arrow_down">keyboard_arrow_down</i>
+            gtag("config", "G-KY47V0PKWC");
+        </script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon-16x16.png"
+        />
+        <link rel="manifest" href="manifest.json" />
+        <meta name="msapplication-TileColor" content="#2b0f54" />
+        <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+        <meta name="theme-color" content="#2b0f54" />
+        <!-- Import the stylesheet style.css -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/index_article.css" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <script src="js/typing.js" defer></script>
+        <script src="js/image-effect.js" defer></script>
+        <title>Claudio Paloscia</title>
+        <meta
+            name="description"
+            content="Claudio Paloscia's personal website and playground. Always under construction."
+        />
+    </head>
+    <body>
+        <div id="main">
+            <div id="mainText">
+                <h1 id="name"></h1>
+                <h3 id="se">|</h3>
+            </div>
+            <img
+                src="images/pixel_art.png"
+                alt="pixel art"
+                width="402px"
+                id="pixel_art"
+            />
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h2 id="modal-title">Send me an anonymous message</h2>
+                <p>
+                    (This form is not private yet. Do not write any sensitive
+                    data/information)
+                </p>
+                <form action="" method="" id="form">
+                    <div class="textarea-container">
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="10"
+                            placeholder="Write your message here..."
+                        ></textarea>
+                    </div>
+                    <br />
+                    <div id="div_submit">
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                    <p id="result"></p>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            let form = document.getElementById("form");
+            let result = document.getElementById("result");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                let message = document.getElementById("message").value;
+                fetch("https://ntfy.sh/messagetopaloscia", {
+                    method: "POST",
+                    body: message,
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            result.innerHTML = "Message sent!";
+                        } else {
+                            result.innerHTML = "An error occurred!";
+                        }
+                    })
+                    .catch((error) => {
+                        result.innerHTML = "An error occurred!";
+                    })
+                    .finally(() => {
+                        form.reset();
+                    });
+            });
+
+            let pixel_art = document.getElementById("pixel_art");
+            let modal = document.getElementById("modal");
+            pixel_art.onclick = function () {
+                modal.style.display = "block";
+            };
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+        <!-- <i class="material-icons" id="arrow_down">keyboard_arrow_down</i>
     <div class="articles" id="articles">
       <div class="article" id="article1">
         <img alt="article_image" src="images/bigmac.png"/>
         <h2>Il Big Mac e' il panino migliore del mondo</h2>
       </div>
     </div> -->
-  </body>
+    </body>
 </html>

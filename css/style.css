@@ -113,6 +113,14 @@ body {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    opacity: 0;
+    font-family: "ArcadeGamer";
+    font-size: 25px;
+}
+
+.modal.active {
+    display: block;
+    opacity: 1;
 }
 
 /* Modal Content/Box */
@@ -154,6 +162,7 @@ textarea {
     background-color: #270130;
     color: white;
     text-decoration: none;
+    font-size: 15px;
 }
 
 .textarea-container {
@@ -176,9 +185,24 @@ textarea {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "ArcadeGamer";
+    font-size: 20px;
+    z-index: 99;
 }
 
 #submit:hover {
     background-color: #410050;
     color: #ff9900;
+}
+
+#pacman_ghost {
+    z-index: 98;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+#pacman_ghost.active {
+    transform: translateY(-30px);
+    transition: transform 0.3s ease;
 }

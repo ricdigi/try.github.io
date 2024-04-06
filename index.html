@@ -138,6 +138,12 @@
                     </div>
                     <br />
                     <div id="div_submit">
+                        <img
+                            src="images/pacman_ghost.png"
+                            alt="whoops"
+                            width="45px"
+                            id="pacman_ghost"
+                        />
                         <button type="submit" id="submit">Submit</button>
                     </div>
                     <p id="result"></p>
@@ -151,6 +157,10 @@
             form.addEventListener("submit", (e) => {
                 e.preventDefault();
                 let message = document.getElementById("message").value;
+                if (message === "") {
+                    result.innerHTML = "Please write a message!";
+                    return;
+                }
                 fetch("https://ntfy.sh/messagetopaloscia", {
                     method: "POST",
                     body: message,
@@ -173,14 +183,25 @@
             let pixel_art = document.getElementById("pixel_art");
             let modal = document.getElementById("modal");
             pixel_art.onclick = function () {
-                modal.style.display = "block";
+                modal.classList.add("active");
             };
 
             window.onclick = function (event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
+                    modal.classList.remove("active");
+                    result.innerHTML = "";
                 }
             };
+
+            let submit = document.getElementById("submit");
+            submit.addEventListener("mouseover", () => {
+                let pacman_ghost = document.getElementById("pacman_ghost");
+                pacman_ghost.classList.add("active");
+            });
+            submit.addEventListener("mouseout", () => {
+                let pacman_ghost = document.getElementById("pacman_ghost");
+                pacman_ghost.classList.remove("active");
+            });
         </script>
         <!-- <i class="material-icons" id="arrow_down">keyboard_arrow_down</i>
     <div class="articles" id="articles">

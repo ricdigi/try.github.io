@@ -228,27 +228,21 @@
 
             let tardis = document.getElementById("tardis");
             let tardis_container = document.getElementById("tardis_container");
-            tardis.setAttribute("x", 0);
-            tardis.setAttribute("y", 0);
-            let screen_width = window.innerWidth;
-            let screen_height = window.innerHeight;
-            tardis_container.onmouseover = function () {
-                x_offset = Math.floor(Math.random() * 100) - 50;
-                y_offset = Math.floor(Math.random() * 100) - 50;
-                if (x_offset < 0) x_offset -= 100;
-                else x_offset += 100;
+            let initial_x = Math.floor(Math.random() * 90);
+            let initial_y = Math.floor(Math.random() * 90);
+            tardis_container.style.left = initial_x + "%";
+            tardis_container.style.top = initial_y + "%";
 
-                if (y_offset < 0) y_offset -= 100;
-                else y_offset += 100;
-                x = parseInt(tardis.getAttribute("x")) + x_offset;
-                y = parseInt(tardis.getAttribute("y")) + y_offset;
-                if (x > screen_width / 2) x = x - x_offset * 2;
-                if (y > screen_height * 0.1) y = y - y_offset * 2;
-                if (x < -(screen_width / 2)) x = x - x_offset * 2;
-                if (y < -(screen_height * 0.8)) y = y - y_offset * 2;
-                tardis.setAttribute("x", x);
-                tardis.setAttribute("y", y);
-                tardis.style.transform = `translate(${x}px, ${y}px)`;
+            tardis_container.onmouseenter = function () {
+                let new_x = Math.floor(Math.random() * 90);
+                let new_y = Math.floor(Math.random() * 90);
+                tardis_container.style.left = new_x + "%";
+                tardis_container.style.top = new_y + "%";
+            };
+
+            tardis_container.onclick = function () {
+                window.location.href =
+                    "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
             };
         </script>
         <!-- <i class="material-icons" id="arrow_down">keyboard_arrow_down</i>

@@ -15,6 +15,10 @@
 
             gtag("config", "G-KY47V0PKWC");
         </script>
+        <script
+            src="https://kit.fontawesome.com/07f66c1a37.js"
+            crossorigin="anonymous"
+        ></script>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -119,9 +123,20 @@
                 id="pixel_art"
             />
         </div>
+        <div id="tardis_container">
+            <img
+                src="images/tardis.png-large.png"
+                alt="tardis"
+                id="tardis"
+                width="40px"
+            />
+        </div>
 
         <div class="modal" id="modal">
             <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa-solid fa-xmark close" id="close_modal"></i>
+                </div>
                 <h2 id="modal-title">Send me an anonymous message</h2>
                 <p style="text-align: center">
                     (This form is not private yet. Do not write any sensitive
@@ -190,6 +205,7 @@
                 if (event.target == modal) {
                     modal.classList.remove("active");
                     result.innerHTML = "";
+                    form.reset();
                 }
             };
 
@@ -202,6 +218,38 @@
                 let pacman_ghost = document.getElementById("pacman_ghost");
                 pacman_ghost.classList.remove("active");
             });
+
+            let close_modal = document.getElementById("close_modal");
+            close_modal.onclick = function () {
+                modal.classList.remove("active");
+                result.innerHTML = "";
+                form.reset();
+            };
+
+            let tardis = document.getElementById("tardis");
+            let tardis_container = document.getElementById("tardis_container");
+            tardis.setAttribute("x", 0);
+            tardis.setAttribute("y", 0);
+            let screen_width = window.innerWidth;
+            let screen_height = window.innerHeight;
+            tardis_container.onmouseover = function () {
+                x_offset = Math.floor(Math.random() * 100) - 50;
+                y_offset = Math.floor(Math.random() * 100) - 50;
+                if (x_offset < 0) x_offset -= 100;
+                else x_offset += 100;
+
+                if (y_offset < 0) y_offset -= 100;
+                else y_offset += 100;
+                x = parseInt(tardis.getAttribute("x")) + x_offset;
+                y = parseInt(tardis.getAttribute("y")) + y_offset;
+                if (x > screen_width / 2) x = x - x_offset * 2;
+                if (y > screen_height * 0.1) y = y - y_offset * 2;
+                if (x < -(screen_width / 2)) x = x - x_offset * 2;
+                if (y < -(screen_height * 0.8)) y = y - y_offset * 2;
+                tardis.setAttribute("x", x);
+                tardis.setAttribute("y", y);
+                tardis.style.transform = `translate(${x}px, ${y}px)`;
+            };
         </script>
         <!-- <i class="material-icons" id="arrow_down">keyboard_arrow_down</i>
     <div class="articles" id="articles">

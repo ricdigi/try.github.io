@@ -110,7 +110,7 @@ body {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: hidden; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     opacity: 0;
@@ -135,6 +135,19 @@ body {
     border: 1px solid #ff9900;
     color: #ff9900;
     width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-header {
+    width: 100%;
+}
+
+.close {
+    float: right;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    transform: scale(1.2);
 }
 
 #div_submit {
@@ -194,6 +207,7 @@ textarea {
 #submit:hover {
     background-color: #410050;
     color: #ff9900;
+    transform: scale(1.1);
 }
 
 #pacman_ghost {
@@ -205,4 +219,22 @@ textarea {
 #pacman_ghost.active {
     transform: translateY(-30px);
     transition: transform 0.3s ease;
+}
+
+#tardis {
+    z-index: 98;
+    position: relative;
+    transition: transform 0.1s linear;
+}
+
+#tardis:hover {
+    transform: scale(1.3);
+}
+
+#tardis_container {
+    position: absolute;
+    /* Move it to the center */
+    left: 50%;
+    top: 80%;
+    padding: 30px;
 }

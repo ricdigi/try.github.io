@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-color: #2b0f54;
+    background-color: #ffffff;
     color: #fff;
     /* text-align: center; */
     /* display: flex;
@@ -21,18 +21,36 @@ body {
 }
 
 #main {
-    background-color: #2b0f54;
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: absolute;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    font-family: 'Roboto', Arial, sans-serif; /* Helvetica as the primary, Arial and sans-serif as fallbacks */
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
 
-    font-family: "ArcadeGamer";
+
+#maincol {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Roboto', Arial, sans-serif; /* Helvetica as the primary, Arial and sans-serif as fallbacks */
     font-size: 30px;
     line-height: 1.5;
     margin: 0;
@@ -44,26 +62,92 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding-bottom: 0;
+    margin-right: 10px;
 }
 
 #name {
     font-size: 65px;
-    margin-bottom: 0px;
-    color: #fd7f42;
+    margin-bottom: 0px; 
+    color: #000000;
+    font-weight: bold;
+    font-style: italic;
+    padding-bottom: 0;  
+    line-height: 80px;
+}
+
+.custom-divider {
+    height: 2px;
+    width: 105%;  
+    background-color: #000;  
+    margin: 0 auto;  
+    margin-top: 2px; 
+    margin-bottom: 0px;  
 }
 
 #se {
-    font-size: 30px;
-    color: #f24e63;
+    font-size: 40px;
+    color: #000000;
     margin-top: 0px;
+    font-weight: 250;
+    font-style: italic;
+    margin-bottom: 8px; /* Remove bottom margin */
+    padding-bottom: 0; /* Remove bottom padding if any */
+    
+}
+
+#corp {
+    font-size: 25px;
+    color: #000000;
+    margin-top: 0px;
+    font-weight: 250;
+    font-style: italic;
+    margin-bottom: 8px; /* Remove bottom margin */
+    padding-bottom: 0; /* Remove bottom padding if any */
+    padding-left: 100px;
+    padding-right:100px;
+    justify-content: center;
+    align-items: center;
 }
 
 #pixel_art {
-    rotate: -6deg;
+    /*rotate: -6deg;*/
     transition: transform 0.3s ease;
     object-fit: cover;
     width: 350px;
     height: 350px;
+}
+
+#button-container {
+    display: flex;
+    gap: 10px; /* Adjust the space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    padding: 0px 0; /* Space above and below the button container */
+}
+
+.button {
+    text-decoration: none; /* Removes underline from links */
+    font-size: 25px; /* Sets the text size */
+    font-style: italic;
+    font-weight: bold; /* Makes the font bold */
+    color: white; /* Sets the text color to white */
+    padding: 5px 15px; /* Top and bottom padding 10px, left and right padding 20px */
+    padding-left: 14px;
+    padding-right: 18px;
+    border-radius: 30px; /* Rounds the corners of the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.about {
+    background-color: #56C1FF; /* Light blue background */
+}
+
+.blog {
+    background-color: #FF644E; /* Red background */
+}
+
+.button:hover {
+    opacity: 0.8; /* Slight transparency on hover */
 }
 
 #arrow_down {
@@ -150,6 +234,8 @@ body {
     transform: scale(1.2);
 }
 
+
+
 #div_submit {
     display: flex;
     flex-direction: column;
@@ -210,28 +296,4 @@ textarea {
     transform: scale(1.1);
 }
 
-#pacman_ghost {
-    z-index: 98;
-    position: absolute;
-    transition: transform 0.3s ease;
-}
 
-#pacman_ghost.active {
-    transform: translateY(-30px);
-    transition: transform 0.3s ease;
-}
-
-#tardis {
-    z-index: 98;
-    position: relative;
-    transition: all 0.1s linear;
-}
-
-#tardis_container {
-    transition: all 0.1s ease-in-out;
-    padding: 40px;
-    position: absolute;
-    /* Move it to the center */
-    left: 50%;
-    top: 80%;
-}
